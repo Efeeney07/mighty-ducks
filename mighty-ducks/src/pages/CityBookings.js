@@ -84,7 +84,7 @@ function CityBookings() {
             }
             console.log(favorite.favoritedBy, favorite.departingFrom, favorite.arrivingAt,favorite.airline, favorite.price,favorite.departure)
 
-                await fetch("http://localhost:3000/Favorite/add", {
+                await fetch("https://travelwizard-mga2t.ondigitalocean.app/mighty-ducks-server/Favorite/add", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
