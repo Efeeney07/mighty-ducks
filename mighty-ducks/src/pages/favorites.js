@@ -35,7 +35,7 @@ export default function FavList() {
    async function getUserFavorites(){
     var user=localStorage.getItem('user');
 
-    const response = await fetch(`http://localhost:3000/Favorite/${user}`);
+    const response = await fetch(`https://travelwizard-mga2t.ondigitalocean.app/mighty-ducks-server/Favorite/${user}`);
  
      if (!response.ok) {
        const message = `An error occurred: ${response.statusText}`;
@@ -54,7 +54,7 @@ export default function FavList() {
 
  // This method will delete a record
  async function deleteRecord(id) {
-  const response=await fetch(`http://localhost:3000/Favorite/${id}`, {
+  const response=await fetch(`https://travelwizard-mga2t.ondigitalocean.app/mighty-ducks-server/Favorite/${id}`, {
     method: "DELETE",
   });
   const newRecords = favorite.filter((el) => el._id !== id);

@@ -49,7 +49,7 @@ export default function Create() {
     }
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
-    await fetch("http://localhost:3000/record/add", {
+    await fetch("https://travelwizard-mga2t.ondigitalocean.app/mighty-ducks-server/record/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ export default function Create() {
   // This method fetches the records from the database.
   useEffect(() => {
     async function getRecords() {
-      const response = await fetch(`http://localhost:3000/record/`);
+      const response = await fetch(`https://travelwizard-mga2t.ondigitalocean.app/mighty-ducks-server/record/`);
 
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
